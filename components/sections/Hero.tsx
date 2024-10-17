@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto w-full pt-20 pb-16 text-center lg:py-48 lg:text-left">
         <div className="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
           <Button className="rainbow border mb-10 inline-flex items-center justify-center text-[14px] rounded-full bg-black hover:bg-black">
-            New Schedule API <ChevronRight className="ml-2 h-4 w-4" />
+            New Web Editor in Beta <ChevronRight className="ml-2 h-4 w-4" />
           </Button>
           <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
             <span className="block xl:inline">Email for</span>{" "}

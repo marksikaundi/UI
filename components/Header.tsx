@@ -70,7 +70,7 @@ export default function Header() {
           </Link>
           <Button
             variant="default"
-            className="bg-white text-black rounded-full "
+            className="bg-white hover:bg-white text-black rounded-full "
           >
             Get Started
           </Button>
