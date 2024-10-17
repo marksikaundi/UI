@@ -40,24 +40,9 @@ export default function Header() {
           <Link href="/customers" className="hover:text-gray-300">
             Customers
           </Link>
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center hover:text-gray-300">
-              Resources <ChevronDown className="ml-1 h-4 w-4" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem>Resource 1</DropdownMenuItem>
-              <DropdownMenuItem>Resource 2</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-          <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center hover:text-gray-300">
-              Docs <ChevronDown className="ml-1 h-4 w-4" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem>Documentation</DropdownMenuItem>
-              <DropdownMenuItem>API Reference</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Link href="/resources" className="hover:text-gray-300">
+            Resources
+          </Link>
           <Link href="/pricing" className="hover:text-gray-300">
             Pricing
           </Link>

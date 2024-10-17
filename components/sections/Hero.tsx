@@ -50,8 +50,8 @@ export default function Hero() {
       </div>
       <div className="max-w-7xl mx-auto w-full pb-8 text-center text-sm text-gray-400">
         Backed by{" "}
-        <span className="inline-block bg-gray-700 rounded px-1">Y</span>{" "}
-        Combinator
+        <span className="inline-block bg-gray-700 rounded px-1">D</span>{" "}
+        evCircle Africa
       </div>
     </div>
   );
