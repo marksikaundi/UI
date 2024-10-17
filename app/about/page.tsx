@@ -29,7 +29,7 @@ export default function AboutUs() {
           stuck in the past? It doesn&apos;t have to be that way. We want to
           change that. We want to reimagine email.
         </p>
-        <div className="grid gap-6 md:grid-cols-3 max-w-4xl w-full">
+        <div className="grid gap-6 md:grid-cols-2 max-w-4xl w-full">
           <FeatureCard
             icon={<Mail className="w-6 h-6" />}
             title="Modern Infrastructure"
