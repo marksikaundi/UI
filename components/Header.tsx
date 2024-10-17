@@ -17,9 +17,11 @@ export default function Header() {
   return (
     <header className="bg-black text-white py-4 sticky top-0 z-50 px-6 ">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold">
-          Lupleg
-        </Link>
+        <div className="w-12 h-12 bg-zinc-800 rounded-xl flex items-center justify-center">
+          <Link href="/" className="text-2xl font-bold">
+            <span className="text-2xl font-bold"> L</span>
+          </Link>
+        </div>
 
         {/* Mobile menu button */}
         <button
@@ -92,6 +94,12 @@ export default function Header() {
               >
                 Get Started
               </Button>
+
+              <header className="p-6">
+                <div className="w-12 h-12 bg-zinc-800 rounded-xl flex items-center justify-center">
+                  <span className="text-2xl font-bold">L</span>
+                </div>
+              </header>
             </nav>
           </div>
         )}
