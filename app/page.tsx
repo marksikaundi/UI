@@ -23,11 +23,11 @@ export default function Component() {
   )
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white flex flex-col">
-      <nav className="w-full max-w-6xl mx-auto flex justify-between items-center p-4">
+    <div className="min-h-screen bg-gradient-to-b from-black to-black text-white flex flex-col">
+      {/* <nav className="w-full max-w-6xl mx-auto flex justify-between items-center p-4">
         <div className="flex items-center space-x-2">
           <div className="w-6 h-6 bg-blue-500 rounded-full" />
-          <span className="text-lg font-semibold">Lupleg</span>
+          <span className="text-lg font-semibold">react email</span>
         </div>
         <div className="hidden md:flex space-x-4">
           <NavLinks />
@@ -65,7 +65,7 @@ export default function Component() {
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white pt-20">
+          <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-gray-900 pt-20">
             <nav className="flex flex-col gap-4">
               <NavLinks />
               <div className="flex gap-4 mt-4">
@@ -97,7 +97,7 @@ export default function Component() {
             </nav>
           </SheetContent>
         </Sheet>
-      </nav>
+      </nav> */}
       <div className="flex-1 flex flex-col items-center justify-center p-4">
         <main className="flex flex-col items-center text-center max-w-4xl mx-auto">
           <div className="mb-8">
