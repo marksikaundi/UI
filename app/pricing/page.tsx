@@ -10,6 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Image from "next/image";
 
 export default function Pricing() {
   const [isYearly, setIsYearly] = useState(false);
@@ -144,6 +145,40 @@ export default function Pricing() {
           ))}
         </Accordion>
       </div>
+
+       {/* Call to Action Section */}
+       <section className="py-16 text-center">
+          <h2 className="text-5xl font-bold mb-4">Email reimagined.</h2>
+          <p className="text-5xl font-bold mb-8">Available today.</p>
+          <div className="flex justify-center space-x-4 mb-16">
+            <Button
+              variant="default"
+              size="lg"
+              className="rounded-full bg-white hover:bg-white text-black"
+            >
+              Get Started
+            </Button>
+            <Button
+              size="lg"
+              className="rounded-full hover:rounded-full text-white bg-black hover:bg-[#1F2225]"
+            >
+              Contact Us
+            </Button>
+          </div>
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent" />
+            <Image
+              src="/lupleg.svg"
+              height="200"
+              width="600"
+              alt="Lupleg"
+              className="mx-auto"
+              style={{
+                filter: "drop-shadow(0 0 20px rgba(255,255,255,0.2))",
+              }}
+            />
+          </div>
+        </section>
     </div>
   );
 }
