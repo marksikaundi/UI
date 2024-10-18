@@ -85,13 +85,13 @@ export default function AboutUs() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             The team behind it
           </h2>
-          <p className="text-zinc-300 mb-8">
-            A fully remote team on a mission to build the best communication
-            platform for developers.
+          <p className="text-zinc-300 mb-8 px-16">
+            A fully online learning platform that offers interactive courses
+            with hands-on projects and certificates.
           </p>
           <div className="rounded-lg overflow-hidden">
             <Image
-              src="/placeholder.svg"
+              src="/assets/marksikaundi.jpg"
               width={600}
               height={400}
               alt="The Man behind Lupleg - Mark Sikaundi"
