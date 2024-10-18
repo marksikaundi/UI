@@ -7,7 +7,7 @@ export async function POST(request: Request) {
     try {
         const { email, firstName } = await request.json();
         await resend.emails.send({
-            from: 'support@lupleg.org',
+            from: 'mark@lupleg.org',
             to: email,
             subject: 'hello world',
             react: Welcome({ firstName }),

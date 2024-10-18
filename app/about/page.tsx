@@ -109,7 +109,7 @@ export default function AboutUs() {
             We&apos;re creating something special here, and we&apos;re looking
             for people who care deeply about quality to build it with us.
           </p>
-          <Button variant="outline" size="lg">
+          <Button variant="outline" size="lg" className="rounded-full bg-white hover:bg-white text-black">
             See open positions <ArrowRight className="ml-2 w-4 h-4" />
           </Button>
         </div>
