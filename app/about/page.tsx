@@ -19,7 +19,7 @@ export default function AboutUs() {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col">
       <main className="flex-grow flex flex-col items-center justify-center p-6 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 mt-20">
           Building the modern
           <br />
           email sending platform
@@ -109,7 +109,11 @@ export default function AboutUs() {
             We&apos;re creating something special here, and we&apos;re looking
             for people who care deeply about quality to build it with us.
           </p>
-          <Button variant="outline" size="lg" className="rounded-full bg-white hover:bg-white text-black">
+          <Button
+            variant="outline"
+            size="lg"
+            className="rounded-full bg-white hover:bg-white text-black"
+          >
             See open positions <ArrowRight className="ml-2 w-4 h-4" />
           </Button>
         </div>
