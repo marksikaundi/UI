@@ -40,13 +40,23 @@ export default function Hero() {
         </div>
       </div>
       <div className="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-        <Image
+        {/* <Image
           className="absolute inset-0 w-full h-full object-cover"
-          src="/placeholder.svg"
+          src="/assets/lupleg.mp4"
           alt="3D Cube"
           width={800}
           height={600}
-        />
+        /> */}
+
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/assets/lupleg.mp4" type="video/mp4" />
+        </video>
       </div>
       <div className="max-w-7xl mx-auto w-full pb-8 text-center text-sm text-gray-400">
         Backed by{" "}
