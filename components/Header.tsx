@@ -52,7 +52,7 @@ export default function Header() {
 
         {/* Desktop sign in and get started */}
         <div className="hidden md:flex items-center space-x-4">
-          <Link href="/signin" className="hover:text-gray-300">
+          <Link href="/auth/login" className="hover:text-gray-300">
             Sign in
           </Link>
           <Button
