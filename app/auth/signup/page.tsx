@@ -9,14 +9,16 @@ import Link from "next/link";
 function IconButton({
   icon: Icon,
   children,
+  className,
 }: {
   icon: LucideIcon | React.ComponentType<React.SVGProps<SVGSVGElement>>;
   children: React.ReactNode;
+  className?: string;
 }) {
   return (
     <Button
+      className={`w-full justify-start gap-2 bg-background ${className}`}
       variant="outline"
-      className="w-full justify-start gap-2 bg-background"
     >
       {typeof Icon === "function" ? <Icon className="h-5 w-5" /> : Icon}
       {children}
@@ -30,14 +32,12 @@ export default function Component() {
       <main className="flex flex-1 flex-col items-center justify-center px-4">
         <div className="w-full max-w-sm space-y-6">
           <div className="text-center">
-            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gray-800">
-              <span className="text-xl font-bold">L</span>
-            </div>
+          
             <h1 className="text-2xl font-semibold">Create a Lupleg account</h1>
             <p className="mt-2 text-sm text-gray-400">
               Already have an account?{" "}
               <Link
-                href="/auth/signup"
+                href="/auth/login"
                 className="text-blue-500 hover:underline"
               >
                 Login
@@ -79,12 +79,18 @@ export default function Component() {
             </div>
           </div>
           <div className="space-y-2">
-            <IconButton icon={FaGithub}>Sign up with GitHub</IconButton>
-            <IconButton icon={FcGoogle}>Sign up with Google</IconButton>
+            
+
+<IconButton icon={FaGithub} className="bg-white text-black hover:bg-gray-100">
+  Sign up with GitHub
+</IconButton>
+<IconButton icon={FcGoogle} className="bg-white text-black hover:bg-gray-100">
+  Sign up with Google
+</IconButton>
 
             <Button
               variant="outline"
-              className="w-full justify-center bg-[#16171D] hover:bg-[#16171D] text-white hover:text-white"
+              className="w-full justify-center bg-white text-black hover:bg-gray-100"
             >
               Sign up with SSO
             </Button>
