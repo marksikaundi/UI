@@ -41,7 +41,7 @@ const cards = [
 export default function ImprovedCardCreator() {
     const router = useRouter();
     const handleRedirect = () => {
-      router.push("/image-editor");
+      router.push("/creatives/image-editor");
     };
   return (
     <div className="min-h-screen bg-gray-100">
