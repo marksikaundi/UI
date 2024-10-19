@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useRef, useCallback } from 'react'
+import Image from 'next/image'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -14,7 +15,7 @@ export default function CardEditor() {
   const [overlayOpacity, setOverlayOpacity] = useState(0)
   const [textPosition, setTextPosition] = useState('bottom')
   const [textColor, setTextColor] = useState('white')
-  const [imageUrl, setImageUrl] = useState('/placeholder.svg?height=600&width=400')
+  const [imageUrl, setImageUrl] = useState('/assets/card.png?height=600&width=400')
   const fileInputRef = useRef<HTMLInputElement>(null)
   const cardRef = useRef<HTMLDivElement>(null)
 
@@ -51,10 +52,10 @@ export default function CardEditor() {
   }, [])
 
   return (
-    <div className="flex flex-col md:flex-row gap-8 p-6 max-w-4xl mx-auto">
-      <div className="w-full md:w-1/2 space-y-6">
+    <div className="flex flex-col md:flex-row mt-10 mb-20 gap-8 p-6 max-w-4xl mx-auto">
+      <div className="w-full md:w-1/2  space-y-6">
         <div className="space-y-2">
-          <Label htmlFor="subtitle">Top subtitle</Label>
+          {/* <Label htmlFor="subtitle">Top subtitle</Label> */}
           <Input
             id="subtitle"
             value={subtitle}
@@ -63,12 +64,13 @@ export default function CardEditor() {
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="title">Title</Label>
+          {/* <Label htmlFor="title">Title</Label> */}
           <Input
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Title"
+            className='text-black'
           />
         </div>
         <div className="space-y-2">
@@ -108,13 +110,26 @@ export default function CardEditor() {
       <div className="w-full md:w-1/2">
         <div 
           ref={cardRef}
-          className="aspect-[3/4] rounded-lg overflow-hidden relative cursor-pointer"
+          className="aspect-[3/4] rounded-lg overflow-hidden relative cursor-pointer group"
           onClick={triggerImageUpload}
+          onDragOver={(e) => e.preventDefault()}
+          onDrop={(e) => {
+            e.preventDefault()
+            const file = e.dataTransfer.files[0]
+            if (file && file.type.startsWith('image/')) {
+              const reader = new FileReader()
+              reader.onload = (e) => {
+                setImageUrl(e.target?.result as string)
+              }
+              reader.readAsDataURL(file)
+            }
+          }}
         >
-          <img
+          <Image
             src={imageUrl}
             alt="Card preview"
-            className="w-full h-full object-cover"
+            layout="fill"
+            objectFit="cover"
           />
           <div 
             className="absolute inset-0 bg-primary"
@@ -125,6 +140,9 @@ export default function CardEditor() {
               {subtitle && <p className="text-sm mb-2">{subtitle}</p>}
               {title && <h2 className="text-2xl font-bold">{title}</h2>}
             </div>
+          </div>
+          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <p className="text-white text-lg font-semibold">Click to upload image</p>
           </div>
         </div>
         <input
