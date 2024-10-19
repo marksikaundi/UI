@@ -56,7 +56,7 @@ export default function PsCard() {
               <div>
                 <div className="flex flex-col sm:flex-row items-center sm:items-start mb-2">
                   <h2 className="text-xl sm:text-2xl text-white font-bold mb-2 sm:mb-0 sm:mr-3 text-center sm:text-left">
-                    TypeScript Pro Essentials
+                    TypeScript for Beginners
                   </h2>
                   <span className="bg-green-500 text-black text-xs font-bold px-2 py-1 rounded">
                     Coming soon
@@ -66,8 +66,9 @@ export default function PsCard() {
                   3 Months Program
                 </p>
                 <p className="text-sm text-gray-300 mb-4 text-center sm:text-left">
-                  Total TypeScript Pro Essentials is the ultimate guide to
-                  becoming a TypeScript Wizard.
+                  Learn TypeScript from scratch and build your first project in
+                  3 months. The program is designed for beginners who want to
+                  learn TypeScript.
                 </p>
                 <div className="flex justify-center sm:justify-start">
                   <Link href="/programs/#typescript">
@@ -94,7 +95,7 @@ export default function PsCard() {
               <div>
                 <div className="flex flex-col sm:flex-row items-center sm:items-start mb-2">
                   <h2 className="text-xl sm:text-2xl text-white font-bold mb-2 sm:mb-0 sm:mr-3 text-center sm:text-left">
-                    Python Pro Essentials
+                    Python for Machine Learning
                   </h2>
                   <span className="bg-green-500 text-black text-xs font-bold px-2 py-1 rounded">
                     Coming soon
@@ -104,8 +105,9 @@ export default function PsCard() {
                   3 Months Program
                 </p>
                 <p className="text-sm text-gray-300 mb-4 text-center sm:text-left">
-                  Total Python Pro Essentials is the ultimate guide to becoming
-                  a Python black bet .
+                  Learn Python for Machine Learning from scratch and build your
+                  first project in 3 months. The program is designed for
+                  beginners who want to learn Python for Machine Learning.
                 </p>
                 <div className="flex justify-center sm:justify-start">
                   <Link href="/programs/#python-pro">
