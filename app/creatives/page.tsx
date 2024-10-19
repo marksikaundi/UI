@@ -1,107 +1,100 @@
-"use client"
+import { ArrowUpRight, MoreHorizontal } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { useRouter } from "next/navigation";
-import Image from "next/image";
-
-const cards = [
-  {
-    image: "/assets/card.png?height=400&width=300",
-    title: "2024",
-    subtitle: "Discover the best places",
-    gradient: "from-teal-400 to-teal-600",
-  },
-  {
-    image: "/assets/card.png?height=400&width=300",
-    title: "BeatsLive",
-    subtitle: "Listen to new music with your closest friends.",
-    gradient: "from-red-800 to-red-900",
-  },
-  {
-    image: "/assets/card.png?height=400&width=300",
-    title: "THE MAGE",
-    subtitle: "And a voice was heard throughout the woods. Stay away, it said.",
-    gradient: "from-purple-700 to-purple-900",
-  },
-  {
-    image: "/assets/card.png?height=400&width=300",
-    title: "Beautiful world",
-    subtitle: "Discover the mythical sunken ship wreck.",
-    gradient: "from-teal-600 to-teal-800",
-  },
-  {
-    image: "/assets/card.png?height=400&width=300",
-    title: "EXCITING TRAVELS",
-    subtitle: "10 must visit places",
-    gradient: "from-purple-500 to-purple-700",
-  },
-]
-
-export default function ImprovedCardCreator() {
-    const router = useRouter();
-    const handleRedirect = () => {
-      router.push("/creatives/image-editor");
-    };
+export default function Component() {
   return (
-    <div className="min-h-screen bg-gray-100">
-      <div className="bg-white shadow-md">
-        <div className="container mx-auto px-4 py-12 text-center">
-          <h1 className="text-3xl font-bold mb-6">
-            Open for everyone and free to use like the illustrations,
-            <br />
-            thanks to our <a href="#" className="text-purple-600 hover:underline">supporters</a>!
-          </h1>
-          <Button  onClick={handleRedirect} className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105">
-            Create your own cards now
-          </Button>
+    <div className="container mx-auto my-10 px-4 py-8">
+      <header className="flex justify-between items-center mb-8">
+        <h1 className="text-3xl font-bold"></h1>
+        <nav>
+          <ul className="flex space-x-4">
+            <li>
+              <a href="#" className="text-gray-600 hover:text-gray-900">
+                Illustrations
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-gray-600 hover:text-gray-900">
+                Handcrafts
+              </a>
+            </li>
+            <li>
+              <button className="text-gray-600 hover:text-gray-900">
+                <MoreHorizontal className="h-6 w-6" />
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h2 className="text-xl font-semibold text-purple-600 mb-2">/creative-tools</h2>
+        <p className="text-gray-600 mb-8">
+          Discover tools and integrations we have created to enhance your products, projects and workflow.
+        </p>
+        <div className="grid md:grid-cols-2 gap-8">
+          <ToolCard
+            icon={<div className="bg-purple-700 text-white p-2 rounded">Xd</div>}
+            title="unDraw for Adobe XD"
+            description="With more than 300k downloads, our first integration brings every unDraw illustration directly inside the popular design tool."
+            link="#"
+          />
+          <ToolCard
+            icon={<div className="text-4xl">😊</div>}
+            title="Moodful"
+            description="Intelligent moodboards for designers directly inside your favorite design tools. Bring together the visual inspiration you gather and need."
+            link="#"
+          />
+          <ToolCard
+            icon={<div className="bg-yellow-400 p-2 rounded">
+              <div className="bg-black h-4 w-4"></div>
+            </div>}
+            title="Symbols for Miro"
+            description="A special edition that can improve the way you create presentations, provide visual feedback or mark needed actions in an effective way."
+            link="#"
+          />
+          <ToolCard
+            icon={<div className="bg-gradient-to-br from-pink-500 to-orange-400 text-white p-2 rounded">Cc</div>}
+            title="unDraw X for Adobe Creative Cloud"
+            description="More creative options for everyone. Directly inside your creative workflow. Just sync to your Adobe Creative Cloud libraries."
+            badge="LIVE BETA"
+            link="#"
+          />
         </div>
-      </div>
+      </main>
+    </div>
+  )
+}
 
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          {cards.map((card, index) => (
-            <Card key={index} className="overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:scale-105">
-              <CardContent className="p-0 relative h-[400px]">
-                <Image
-                  src={card.image}
-                  alt={card.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="absolute inset-0"
-                />
-            
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-sm font-semibold mb-2 uppercase tracking-wider">{card.title}</h3>
-                  <p className="text-xl font-bold leading-tight">{card.subtitle}</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
+interface ToolCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  badge?: string;
+  link: string;
+}
 
-      <footer className="bg-white py-8 mt-16">
-        <div className="container mx-auto px-4 text-center text-sm text-gray-600">
-          <p className="mb-2">
-            Created by{" "}
-            <a href="#" className="text-purple-600 hover:underline font-medium">
-              Mark Sikaundi - Lupleg
-            </a>{" "}
-            and{" "}
-            <a href="#" className="text-purple-600 hover:underline font-medium">
-              Aggelos Gesoulis
-            </a>
-          </p>
-          <p>
-            Huge thanks to{" "}
-            <a href="#" className="text-purple-600 hover:underline font-medium">
-              Rasmus Andersson
-            </a>{" "}
-            for the Inter font.
-          </p>
-        </div>
-      </footer>
+function ToolCard({ icon, title, description, badge, link }: ToolCardProps) {
+  return (
+    <div className="border rounded-lg p-6 flex flex-col">
+      <div className="flex justify-between items-start mb-4">
+        <div className="text-3xl">{icon}</div>
+        <a href={link} className="text-teal-500 hover:text-teal-600 transition-colors">
+          <ArrowUpRight className="h-5 w-5" />
+        </a>
+      </div>
+      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <p className="text-gray-600 flex-grow">{description}</p>
+      {badge && (
+        <span className="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded mt-2">
+          {badge}
+        </span>
+      )}
+      <a
+        href={link}
+        className="mt-4 text-teal-500 hover:text-teal-600 transition-colors inline-flex items-center"
+      >
+        Learn more
+        <ArrowUpRight className="h-4 w-4 ml-1" />
+      </a>
     </div>
   )
 }
