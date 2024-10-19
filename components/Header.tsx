@@ -33,15 +33,16 @@ export default function Header() {
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link href="/about" className="hover:text-gray-300">
-            About
+        <Link href="/programs" className="hover:text-gray-300">
+            Programs
+          </Link>
+          <Link href="/creatives" className="hover:text-gray-300">
+            Creatives
           </Link>
           <Link href="/blog" className="hover:text-gray-300">
             Blog
           </Link>
-          <Link href="/customers" className="hover:text-gray-300">
-            Customers
-          </Link>
+          
           <Link href="/resources" className="hover:text-gray-300">
             Resources
           </Link>
